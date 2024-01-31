@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import locations from '../../assets/icons/Location.png'
 import money from '../../assets/icons/money.png'
 const Job = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
+    const { id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
         <div>
             <div>
@@ -16,16 +17,16 @@ const Job = ({ job }) => {
                         </div>
                         <div className="flex items-center justify-between text-lg font-semibold mt-4">
                             <div className='flex items-center justify-between'>
-                            <img src= {locations} />
-                            <h2>{location}</h2>
+                                <img src={locations} />
+                                <h2>{location}</h2>
                             </div>
                             <div className='flex items-center justify-between'>
-                                <img src= {money} />
-                            <h2>{salary}</h2>
+                                <img src={money} />
+                                <h2>{salary}</h2>
                             </div>
                         </div>
                         <div className="card-actions justify-start">
-                            <button className="bg-purple-500 p-3 mt-8 text-white font-semibold rounded-xl">Show Details</button>
+                            <Link to={`/job/${id}`}><button className="bg-purple-500 p-3 mt-8 text-white font-semibold rounded-xl">Show Details</button></Link>
                         </div>
                     </div>
                 </div>
