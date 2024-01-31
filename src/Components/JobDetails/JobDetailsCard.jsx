@@ -3,7 +3,7 @@ const JobDetailsCard = ({ job }) => {
     const { job_description, job_responsibility, educational_requirements, experiences, contact_information, phone, email, address } = job
     return (
         <div className="mt-24">
-            <div className="  border-2 lg:w-[1100px] lg:h-[880px] lg:ml-48 rounded-xl bg-green-50 text-">
+            <div className="  border-2 lg:w-[1100px] lg:h-[890px] lg:ml-48 rounded-xl bg-green-50 text-">
                 <div className="hero-content text-center ">
                     <div>
                         <h1 className="text-4xl font-bold mt-10 underline">Job Details</h1>
@@ -15,6 +15,8 @@ const JobDetailsCard = ({ job }) => {
                         <p className=" text-justify mr-12  text-xl"><span className="font-bold underline">Contact Information</span> : <br /> <span className="font-bold underline">Phone</span> : {contact_information.phone}</p>
                         <p className=" text-justify mr-12 text-xl "><span className="font-bold underline"></span> <br /> <span className="font-bold underline">Email</span> : {contact_information.email}</p>
                         <p className=" text-justify mr-12 text-xl"><span className="font-bold underline"></span>  <br /> <span className="font-bold underline">Address</span> : {contact_information.address}</p>
+
+                        <button className="bg-green-500 text-white font-bold p-2 rounded-xl mt-10">Apply Now</button>
                     </div>
                 </div>
             </div>
