@@ -1,6 +1,15 @@
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const JobDetailsCard = ({ job }) => {
+
+
+
     const { job_description, job_responsibility, educational_requirements, experiences, contact_information, phone, email, address } = job
+
+
+    const handleApplyJob = () => {
+        toast('You Have Applied Successfully! ')
+    }
     return (
         <div className="mt-24">
             <div className="  border-2 lg:w-[1100px] lg:h-[890px] lg:ml-48 rounded-xl bg-green-50 text-">
@@ -16,7 +25,10 @@ const JobDetailsCard = ({ job }) => {
                         <p className=" text-justify mr-12 text-xl "><span className="font-bold underline"></span> <br /> <span className="font-bold underline">Email</span> : {contact_information.email}</p>
                         <p className=" text-justify mr-12 text-xl"><span className="font-bold underline"></span>  <br /> <span className="font-bold underline">Address</span> : {contact_information.address}</p>
 
-                        <button className="bg-green-500 text-white font-bold p-2 rounded-xl mt-10">Apply Now</button>
+                        <div>
+                            <button onClick={handleApplyJob} className="bg-green-500 text-white font-bold p-2 rounded-xl mt-10">Apply Now</button>
+                        </div>
+                        <ToastContainer />
                     </div>
                 </div>
             </div>
