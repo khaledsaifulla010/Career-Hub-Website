@@ -1,13 +1,15 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from '../Utility/LocalStorage';
 const JobDetailsCard = ({ job }) => {
 
 
 
-    const { job_description, job_responsibility, educational_requirements, experiences, contact_information, phone, email, address } = job
+    const { id,job_description, job_responsibility, educational_requirements, experiences, contact_information, phone, email, address } = job
 
 
     const handleApplyJob = () => {
+        saveJobApplication(id);
         toast('You Have Applied Successfully! ')
     }
     return (
